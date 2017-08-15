@@ -1,2 +1,10 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+①新年贺卡
+切图→重构→前端→优化
+1.用ps切取需要的图片，背景图用jpg图片，其他图片采用png24透明图片
+2.用HTML5写整个项目框架，配置meta标签，用CSS3实现前端静态页面
+3.用原生JAVASCRIPT调用API实现动画交互效果
+4.优化：	简化结构层标签，用后代选择器等
+	尽量用压缩后的文件
+	用原生JAVASCRIPT编写而不是前端框架，减少请求
+	尽量少用图片，用CSS控制标签完成图片效果
+	用webserve测试

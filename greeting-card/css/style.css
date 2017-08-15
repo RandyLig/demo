@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1.56vw;
+}
+html,body {
+    height: 100%;
+}
+/* 右上角音乐播放器 */
+.music {
+    position: fixed;
+    width: 15vw;
+    height: 15vw;
+    right: 4vw;
+    top: 3vh;
+    border: 4px solid #ff0000;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 50;
+}
+.music > img:first-of-type {
+    position: absolute;
+    top: 24%;
+    right: 2.5%;
+    width: 28.421%;
+    z-index: 51;
+}
+.music > img:last-of-type {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    width: 79%;
+}
+.music img.play {
+    animation: music_disc 2s linear infinite;
+}
+@keyframes music_disc {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* bg 背景开发*/
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.page .bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.p1 {
+    transition: all 1s;
+    display: block;
+}
+.p1top2 {
+    opacity: 0;
+}
+.p1 > .bg {
+    background: url("../img/p1_bg.jpg") no-repeat center center;
+    background-size: 100%;
+}
+.p1 .p1_lantern {
+    position: absolute;
+    top: -3.4%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 45vw;
+    height: 71.2vh;
+    font-size: 3.506em;
+    color: #fff;
+    background: url("../img/p1_lantern.png") no-repeat center bottom;
+    background-size: 100%;
+    padding-top: 31vh;
+    /* 兼容性*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+}
+@keyframes p1_lantern {
+    0% {
+        opacity: 0.6;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.6;
+        transform: scale(0.8);
+    }
+}
+.p1 .p1_lantern:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /*伪类需要一个content否则不会出现*/
+    content: '';
+    border-radius: 50%;
+    width: 30vw;
+    height: 30vw;
+    background: #d60b3b;
+    opacity: .5;
+    /* 兼容性*/
+    box-shadow: 0 0 10vw 10vw #d60b3b;
+    -webkit-box-shadow: 0 0 10vw 10vw #d60b3b;
+    -o-box-shadow: 0 0 10vw 10vw #d60b3b;
+    -moz-box-shadow: 0 0 10vw 10vw #d60b3b;
+    animation:p1_lantern 2s linear infinite ;
+    z-index: -1;
+}
+.p1 .p1_imooc {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 9vh;
+    margin: auto;
+    background: url("../img/p1_imooc.png") no-repeat center bottom;
+    background-size: 100%;
+    width: 27.656vw;
+    height: 18.63vh;
+}
+.p2 > .bg {
+    background: url("../img/p2_bg.jpg") no-repeat center center;
+    background-size: 100%;
+}
+.p2 {
+    transition: all 1s;
+    display: none;
+}
+.p2_appear {
+    opacity: 1;
+}
+.fadeOut {
+    transform: translate(0,-100%);
+    opacity: 0.3;
+}
+.p2 .p2_circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    background: url("../img/p2_circle_outer.png") no-repeat center bottom;
+    background-size: 100%;
+    width: 59.375vw;
+    height: 59.375vw;
+    animation: p2_circle_outer 3s linear 1s infinite;
+}
+@keyframes p2_circle_outer {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.p2 .p2_circle:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    content: '';
+    margin: auto;
+    background: url("../img/p2_circle_middle.png") no-repeat center bottom;
+    background-size: 100%;
+    width: 45.625vw;
+    height: 45.625vw;
+    animation: p2_circle_middle 3s linear 2s infinite;
+}
+@keyframes p2_circle_middle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.p2 .p2_circle:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    content: '';
+    margin: auto;
+    background: url("../img/p2_circle_inner.png") no-repeat center bottom;
+    background-size: 100%;
+    width: 39.9vw;
+    height: 39.9vw;
+    animation: p2_circle_inner 4s linear 3s infinite;
+}
+@keyframes p2_circle_inner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.p2 .p2_2016 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    background: url("../img/p2_2016.png") no-repeat center bottom;
+    background-size: 100%;
+    width: 27.5vw;
+    height: 6.4vh;
+}
+.p3 {
+    display:  none;
+    transition: all 1s;
+}
+.fadeIn {
+    transform: translate(0,-100%);
+}
+.p3 > .bg {
+    background: url("../img/p3_bg.jpg") no-repeat center center;
+    background-size: 100%;
+}
+.p3 .p3_logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 7.82vh;
+    margin: auto;
+    background: url("../img/p3_logo.png") no-repeat center bottom;
+    background-size: 100%;
+    width: 34.6875vw;
+    height: 6.327vh;
+}
+.p3 .p3_title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 21vh;
+    margin: auto;
+    background: url("../img/p3_title.png") no-repeat center bottom;
+    background-size: 100%;
+    width: 48.125vw;
+    height: 50vh;
+}
+.p3 .p3_second {
+     position: absolute;
+     left: 3.75vw;
+     top: 25.48vh;
+     margin: auto;
+     background: url("../img/p3_couplet_second.png") no-repeat center bottom;
+     background-size: 100%;
+     width: 22.8125vw;
+     height: 41.652vh;
+ }
+.p3 .p3_first {
+    position: absolute;
+    right: 3.75vw;
+    top: 25.48vh;
+    margin: auto;
+    background: url("../img/p3_couplet_first.png") no-repeat center bottom;
+    background-size: 100%;
+    width: 22.8125vw;
+    height: 41.652vh;
+}
+.p3 .p3_blessing {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10vh;
+    margin: auto;
+    border-radius: 50%;
+    background: url("../img/p3_blessing.png") no-repeat center bottom;
+    background-size: 100%;
+    width: 32vw;
+    height: 32vw;
+    animation: p3_blessing 2s linear infinite;
+}
+@keyframes p3_blessing {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
